@@ -1,0 +1,136 @@
+{% load static %}
+    <style>
+        .section3{
+            background: #de0611;
+            height: 450px;
+            width: 100%;
+        }
+        .section3 h1{
+            color: #fff;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            padding-top: 1rem;
+        }
+
+        .mjt-section3-title{
+            display: block;
+            justify-content: center;
+            text-align: center;
+            color: #de0611;
+            margin-top: 2rem;
+        }
+        .mjt-contact-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .mjt-contact-card{
+            background: #fff;
+            width: 50%;
+            position: relative;
+        }
+        form{
+            display: block;
+            padding: 20px 30px;
+
+        }
+        form .mjt-form{
+            width: 100%;
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            
+
+        }
+        form input{
+            width: 100%;
+            height: 30px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            transition: .5s;
+        }
+        form label{
+            text-align: left;
+            color: #808080;
+            position: absolute;
+            left: 35px;
+            margin-top: 2px;
+            transition: .5s;
+        }
+        
+        .mjt-form input:focus,
+        .mjt-form input:valid,
+        .mjt-form textarea:focus,
+        .mjt-form textarea:valid
+         {
+            transition: .5s;
+            width: 80%;
+        }
+        .mjt-form input:focus ~ label,
+        .mjt-form input:valid ~ label,
+        .mjt-form textarea:valid ~ label,
+        .mjt-form textarea:focus ~ label{
+            position: relative;
+            left: 0px;
+            color: #de0611;
+            transition: .5s;
+        }
+        form textarea{
+            width: 100%;
+            height: 100px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        form button{
+            display: flex-item;
+            justify-content: center;
+            align-items: center;
+            height: 30px;
+            color: #fff;
+            border: none;
+            background: #de0611;
+            width: 20%;
+            padding: 10px 10px 30px 10px;
+            font-weight: 700;
+        }
+        form button:hover{
+            background: #8f0209;
+            color: #fff;
+        }
+    </style>
+        <!---->
+<section class="section3">
+    <div class="mjt-section3-title">
+        <h1>Contacto</h1>
+        <div class="mjt-contact-container">
+            <div class="mjt-contact-card">
+                <form method="POST"><!--{% csrf_token %}-->
+                    <div class="mjt-form">
+                        <input type="text" class="mjt-name" required/>
+                        <label class="mjt-label-name">Nombre</label>
+                    </div>
+                    <div class="mjt-form">
+                        <input type="text" class="mjt-subject" required/>
+                        <label class="mjt-label-subject">Asunto</label>
+                    </div>
+                    <div class="mjt-form">
+                        <input type="email" class="mjt-email" required/>
+                        <label class="mjt-label-email">Correo</label>
+                    </div>
+                    <div class="mjt-form">
+                        <textarea class="mjt-text" required></textarea>
+                        <label class="mjt-label-text">Mensaje</label>
+                    </div>
+                    <br/>
+                    <button type="submit" class="mjt-send">Enviar</button>
+                </form>  
+            </div>
+        </div>
+    </div>
+    
+</section>
+{% comment %} <script src="{% static 'js/contact.js' %}"></script> {% endcomment %}
+        
+ 
+    

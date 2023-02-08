@@ -1,0 +1,44 @@
+{% load static %}
+<section class="mjt-banner">
+    <img src="{% static 'img/original.png' %}" class="mjt-bg">
+    <div class="mjt-content">
+        <h4>
+            <span>Mario Jasso</span>
+            <span>Ingeniero en TIC</span>
+            <span>Full stack</span>
+        </h4>
+        <p>Soy Mario, un ingeniero que, aparte de ser ingeniero en sistemas, también es amante del deporte 
+            y del diseño. Me gusta el diseño tanto como la programación, soy tan versatil que me acondiciono a
+            cualquier situación.</p>
+        <div class="mjt-buttons-home">
+            {% comment %} <a href="#"><ion-icon class="mjt-icons-home" name="person-outline"></ion-icon>Quién soy</a> {% endcomment %}
+            {% comment %} <a href="#" class="black"><ion-icon class="mjt-icons-home" name="albums-outline"></ion-icon></ion-icon>Portafolio</a> {% endcomment %}
+        </div>
+    </div>
+    <!--a class="mjt-play"><img src="{% static 'img/play.png' %}">Ver más</a-->
+</section>
+<div class="mjt-trailer">
+    <video src="{% static 'img/test.mp4' %}" controls="true"></video>
+    {% comment %} <iframe width="560" height="315" src="https://www.youtube.com/embed/5_FCaj_kMUk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> {% endcomment %}
+    <div class="mjt-close-video">
+        <ion-icon name="close-outline"></ion-icon>
+    </div>
+</div>
+<style>
+    
+    
+</style>
+<script>
+    $('.mjt-play').on('click', function(){
+        if($('.mjt-trailer').hasClass('active')){
+            $('.mjt-trailer').removeClass('active')
+        }else{
+            $('.mjt-trailer').addClass('active')
+            $('video').trigger('play')
+        }
+    })
+    $('.mjt-close-video').on('click', function(){        
+        $('.mjt-trailer').removeClass('active')
+        $('video').trigger('pause')
+    })
+</script>

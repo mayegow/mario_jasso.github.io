@@ -1,0 +1,39 @@
+{% include "../master/index.html" %}
+{% load static %}
+{% block content %}
+<section class="mjt-iphone">
+    <div class="mjt-box">
+        <div class="mjt-inner">
+            <div class="mjt-island">
+                <div class="mjt-content-island">
+                    <div class="mjt-details">
+                        <div class="mjt-img-bx">
+                            <img src="{% static 'img/img.jfif' %}"/>
+                        </div>
+                        <p>Mario Jasso</p>
+                    </div>
+                    <div class="mjt-action">
+                        <ion-icon name="call" class="red"></ion-icon>
+                        <ion-icon name="call" class="green"></ion-icon>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <i class="mjt-btn mjt-btn-1"></i>
+        <i class="mjt-btn mjt-btn-2"></i>
+        <i class="mjt-btn mjt-btn-3"></i>
+        <i class="mjt-btn-4"></i>
+    </div>
+</section>
+{% endblock %}
+{% block script %}
+<script>
+    $('.mjt-island').on('click', function(){
+        if($(this).hasClass('active')){
+            $(this).removeClass('active')
+        }else{
+            $(this).addClass('active')
+        }
+    })
+</script>
+{% endblock %}

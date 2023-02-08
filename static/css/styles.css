@@ -1,0 +1,16 @@
+.menu{
+    position: relative;
+    width: 280px;
+    height: 280px;
+    background: rgba(0,0,0,0.1);
+    display: flex;
+    justify-content:center;
+
+}
+
+.menu .toggle{
+    position:relative;
+    width: 60px;
+    height: 60px;
+    background: red;
+}
