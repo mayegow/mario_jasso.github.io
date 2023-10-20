@@ -1,30 +1,16 @@
 {% include "../master/index.html" %}
 {% load static %}
 {% block content %}
-<section class="mjt-iphone">
-    <div class="mjt-box">
-        <div class="mjt-inner">
-            <div class="mjt-island">
-                <div class="mjt-content-island">
-                    <div class="mjt-details">
-                        <div class="mjt-img-bx">
-                            <img src="{% static 'img/img.jfif' %}"/>
-                        </div>
-                        <p>Mario Jasso</p>
-                    </div>
-                    <div class="mjt-action">
-                        <ion-icon name="call" class="red"></ion-icon>
-                        <ion-icon name="call" class="green"></ion-icon>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <i class="mjt-btn mjt-btn-1"></i>
-        <i class="mjt-btn mjt-btn-2"></i>
-        <i class="mjt-btn mjt-btn-3"></i>
-        <i class="mjt-btn-4"></i>
-    </div>
-</section>
+<div class="alert alert-success alert-dismissible fade show position-fixed bottom-0 end-0 d-none animate__animated" id="alert" role="alert">
+    <strong>Welcome to Mario´s Page!</strong> 
+    <button type="button" class="btn-close"   id="close_alert"></button>
+</div>
+
+ß
+{% include '../sections/login.html' %}
+{% include '../sections/form.html' %}
+{% include '../sections/iphone.html' %}
+
 {% endblock %}
 {% block script %}
 <script>
@@ -34,6 +20,22 @@
         }else{
             $(this).addClass('active')
         }
+    })
+    $("#submit_btn").click(()=>{
+        event.preventDefault()
+        // user message
+        console.log("Do it click in button sign 'in'. THANK YOU!")
+        $('#alert').addClass("animate__slideInRight")
+        $('#alert').removeClass("d-none")
+
+    })
+    $('#close_alert').click(()=>{
+        // user message
+        console.log('Do it close button alert!')
+        $('#alert').addClass("animate__slideOutRight")
+        setTimeout(()=>{
+            $('#alert').addClass("d-none").removeClass("animate__slideOutRight")
+        }, 1000)
     })
 </script>
 {% endblock %}

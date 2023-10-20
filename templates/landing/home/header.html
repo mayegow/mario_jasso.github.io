@@ -1,25 +1,26 @@
 {% load static %}
 <section class="mjt-banner">
-    <img src="{% static 'img/original.png' %}" class="mjt-bg">
+    {% comment %} <img src="{% static 'img/original.png' %}" class="mjt-bg"> {% endcomment %}
+    <img src="{% static 'img/foto.png' %}" style="border-radius:50%;"  />
+
     <div class="mjt-content">
+        <h2>Mario Jasso</h2>
         <h4>
-            <span>Mario Jasso</span>
-            <span>Ingeniero en TIC</span>
+            <span>ITC ENGINEER</span>
             <span>Full stack</span>
         </h4>
-        <p>Soy Mario, un ingeniero que, aparte de ser ingeniero en sistemas, también es amante del deporte 
-            y del diseño. Me gusta el diseño tanto como la programación, soy tan versatil que me acondiciono a
-            cualquier situación.</p>
+        <p>I´m Mario, i´m an engineer ICT, in ddition to beign an ICT enginner, i´m sports lover and design. I love both design and programming, i am so versatile that i adapt to any situation.</p>
+        
         <div class="mjt-buttons-home">
-            {% comment %} <a href="#"><ion-icon class="mjt-icons-home" name="person-outline"></ion-icon>Quién soy</a> {% endcomment %}
-            {% comment %} <a href="#" class="black"><ion-icon class="mjt-icons-home" name="albums-outline"></ion-icon></ion-icon>Portafolio</a> {% endcomment %}
+            <a href="#"><ion-icon class="mjt-icons-home" name="person-outline"></ion-icon>Who i´m</a>
+            <a href="{% url 'portfolio' %}" class="black"><ion-icon class="mjt-icons-home" name="albums-outline"></ion-icon></ion-icon>Portfolio</a>
         </div>
     </div>
     <!--a class="mjt-play"><img src="{% static 'img/play.png' %}">Ver más</a-->
 </section>
 <div class="mjt-trailer">
     <video src="{% static 'img/test.mp4' %}" controls="true"></video>
-    {% comment %} <iframe width="560" height="315" src="https://www.youtube.com/embed/5_FCaj_kMUk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> {% endcomment %}
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/5_FCaj_kMUk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     <div class="mjt-close-video">
         <ion-icon name="close-outline"></ion-icon>
     </div>
@@ -28,6 +29,7 @@
     
     
 </style>
+{% block script %}
 <script>
     $('.mjt-play').on('click', function(){
         if($('.mjt-trailer').hasClass('active')){
@@ -42,3 +44,4 @@
         $('video').trigger('pause')
     })
 </script>
+{% endblock %}
