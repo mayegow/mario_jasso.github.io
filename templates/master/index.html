@@ -10,14 +10,16 @@
         <link rel="stylesheet" href="{% static 'css/styles.css' %}">
         <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
         <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/name.css' %}">
         <script src="{% static 'js/jquery_3.6.1/jquery-3.6.1.min.js' %}"></script>
         <script src="{% static 'js/bootstrap/popper.min.js' %}"></script>
         <script src="{% static 'js/bootstrap/bootstrap.min.js' %}"></script>
+        
         {% block head %}
         {% endblock %}
     </head>
+    
     <body>
-        
         {% comment %} {% include '../components/menu.html' %} {% endcomment %}
         {% include '../components/header.html' %}
         {% block content %}
@@ -26,6 +28,7 @@
         {% comment %} {% include '../components/social.html' %} {% endcomment %}
         {% block script %}
         {% endblock %}
+        <script src="{% static 'js/contextual_menu.js' %}"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     </body>

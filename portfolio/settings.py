@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_medusa',
     'portfolio'
 ]
 
@@ -50,6 +51,9 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+MEDUSA_RENDERER_CLASS = 'django_medusa.renderers.FileSystemStaticSiteRenderer'
+MEDUSA_MULTITHREAD = False
 
 ROOT_URLCONF = 'portfolio.urls'
 

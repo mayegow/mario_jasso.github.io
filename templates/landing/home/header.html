@@ -1,47 +1,94 @@
 {% load static %}
-<section class="mjt-banner">
-    {% comment %} <img src="{% static 'img/original.png' %}" class="mjt-bg"> {% endcomment %}
-    <img src="{% static 'img/foto.png' %}" style="border-radius:50%;"  />
 
-    <div class="mjt-content">
-        <h2>Mario Jasso</h2>
-        <h4>
-            <span>ITC ENGINEER</span>
-            <span>Full stack</span>
-        </h4>
-        <p>I´m Mario, i´m an engineer ICT, in ddition to beign an ICT enginner, i´m sports lover and design. I love both design and programming, i am so versatile that i adapt to any situation.</p>
-        
-        <div class="mjt-buttons-home">
-            <a href="#"><ion-icon class="mjt-icons-home" name="person-outline"></ion-icon>Who i´m</a>
-            <a href="{% url 'portfolio' %}" class="black"><ion-icon class="mjt-icons-home" name="albums-outline"></ion-icon></ion-icon>Portfolio</a>
+<section class="p-5" style="background:#051731;">
+    <div class="bubbles-container">
+        <div class="mjt-bubbles">
+            <span style="--i:11;"></span>
+            <span style="--i:12;"></span>
+            <span style="--i:24;"></span>
+            <span style="--i:10;"></span>
+            <span style="--i:14;"></span>
+            <span style="--i:23;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:16;"></span>
+            <span style="--i:19;"></span>
+            <span style="--i:20;"></span>
+            <span style="--i:22;"></span>
+            <span style="--i:25;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:21;"></span>
+            <span style="--i:15;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:26;"></span>
+            <span style="--i:17;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:28;"></span>
+            <span style="--i:12;"></span>
+            <span style="--i:24;"></span>
+            <span style="--i:10;"></span>
+            <span style="--i:14;"></span>
+            <span style="--i:23;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:16;"></span>
+            <span style="--i:19;"></span>
+            <span style="--i:20;"></span>
+            <span style="--i:22;"></span>
+            <span style="--i:25;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:21;"></span>
+            <span style="--i:17;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:28;"></span>
+            <span style="--i:12;"></span>
+            <span style="--i:24;"></span>
+            <span style="--i:10;"></span>
+            <span style="--i:14;"></span>
+            <span style="--i:23;"></span>
+            <span style="--i:20;"></span>
+            <span style="--i:22;"></span>
+            <span style="--i:25;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:21;"></span>
+            <span style="--i:17;"></span>
         </div>
     </div>
-    <!--a class="mjt-play"><img src="{% static 'img/play.png' %}">Ver más</a-->
+    
+    {% comment %} <img src="{% static 'img/original.png' %}" class="mjt-bg"> {% endcomment %}
+    <div class="row P-5">
+        <div class="col-12 col-md-6 d-flex justify-content-center">
+            <img src="{% static 'img/foto.png' %}" class="photo-img"  />
+            
+        </div>
+        <div class="col-12 col-md-6">
+            <div class="mjt-content">
+                <div class="row">
+                    <div class="" style="height:100px;">
+                        <div class="glitch-wrapper" style="background:transparent;">
+                            <div class="glitch" data-text="Mario Jasso">Mario Jasso</div>
+                         </div>
+                        {% comment %} <h2>Mario Jasso</h2> {% endcomment %}
+                    </div>
+                    <h4 class="d-none d-md-flex flex-sm-inline flex-md-column justify-content-center justify-content-md-start">
+                        <p style="color:#0082d4;">ITC ENGINEER &nbsp;</p>
+                        <p style="color:#dc3545;">Front End Developer</p>
+                    </h4>
+                    <h4 class="text-center d-block d-md-none">
+                        <p style="color:#0082d4;">ITC ENGINEER &nbsp;</p> <br>
+                        <p style="color:#dc3545;">Front End Developer</p>
+                    </h4>
+                    
+                    <p class="d-none d-md-block text-left text-white">I´m Mario, i´m an engineer ICT, in addition to beign an ICT enginner, i´m sports lover and design. I love both design and programming, i am so versatile that i adapt to any situation.</p>
+                    <p class="d-block d-md-none text-center text-white">I´m Mario, i´m an engineer ICT, in addition to beign an ICT enginner, i´m sports lover and design. I love both design and programming, i am so versatile that i adapt to any situation.</p>
+                    
+                    <div class="mjt-buttons-home">
+                        <a href="#" class="btn btn-danger rounded-0"><ion-icon class="mjt-icons-home" name="person-outline"></ion-icon>Who i´m</a>
+                        <a href="{% url 'portfolio' %}" class="btn btn-trasnparent text-white rounded-0"><ion-icon class="mjt-icons-home" name="albums-outline"></ion-icon></ion-icon>Portfolio</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+    {% comment %} <!--a class="mjt-play"><img src="{% static 'img/play.png' %}">Ver más</a--> {% endcomment %}
 </section>
-<div class="mjt-trailer">
-    <video src="{% static 'img/test.mp4' %}" controls="true"></video>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/5_FCaj_kMUk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    <div class="mjt-close-video">
-        <ion-icon name="close-outline"></ion-icon>
-    </div>
-</div>
-<style>
-    
-    
-</style>
-{% block script %}
-<script>
-    $('.mjt-play').on('click', function(){
-        if($('.mjt-trailer').hasClass('active')){
-            $('.mjt-trailer').removeClass('active')
-        }else{
-            $('.mjt-trailer').addClass('active')
-            $('video').trigger('play')
-        }
-    })
-    $('.mjt-close-video').on('click', function(){        
-        $('.mjt-trailer').removeClass('active')
-        $('video').trigger('pause')
-    })
-</script>
-{% endblock %}
+
+

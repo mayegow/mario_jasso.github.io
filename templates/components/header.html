@@ -1,25 +1,26 @@
 {% load static %}
-<style>
+<header id="head_menu">
+    <div href="#" class="contextual-menu" > 
 
-    
-</style>
-<header>
-    <a href="#" class="mjt-logo" > 
-        <img src="{% static 'img/foto.png' %}" style="border-radius:50%;" width="50" height="50" />
-        <img src="{% static 'img/logo.png' %}">
-    </a>
-    <!--ul class="mjt-navigation">
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Portafolio</a></li>
-        <li><a href="#">Habilidades</a></li>
-        <li><a href="#">Conoceme</a></li>
-        <li><a href="#">Contacto</a></li>
-    </ul-->
-    <!--div class="mjt-search">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        {% comment %} <img src="{% static 'img/logo.png' %}"> {% endcomment %}
+    </div>
+    {% comment %} <ul class="mjt-navigation">
+        <li><a href="#"><ion-icon name="logo-python"></ion-icon></a></li>
+        <li><a href="#"><ion-icon name="logo-react"></ion-icon></a></li>
+        <li><a href="#"><ion-icon name="logo-vue"></ion-icon></a></li>
+        <li><a href="#"><ion-icon name="document-attach-outline"></ion-icon></a></li>
+        <li><a href="#"><ion-icon name="person-add-outline"></ion-icon></a></li>
+    </ul> {% endcomment %}
+    {% comment %} <!--div class="mjt-search">
         <input type="text" placeholder="Buscar">
         <ion-icon class="mjt-search-icon" name="search-outline"></ion-icon>
-    </div-->
+    </div--> {% endcomment %}
 {% comment %} <button class="mjt-btn-menu">
     <ion-icon name="apps"></ion-icon>
 </button> {% endcomment %}
 </header>
+
